@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upakosh</title>
+    <style>
+        
+    body {
+ font-family: Arial, sans-serif;
+ margin: 0;
+padding: 0;
+background-color: #f4f4f4;
+color: #333;
+}
+
+.navbar {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: right;
+
+}
+
+.navbar li {
+    margin: 0 20px;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+
+}
+
+.navbar a:hover {
+    color: #ddd;
+}
+nav {
+    width: 100%;
+    background-color:darkcyan;
+    padding: 10px 0;
+
+}
+*
+{
+	box-sizing:border-box;
+    font-family: 'lato',sans-serif;
+
+/*width: 100%;
+	height:100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+   
+}*/
+
+}
+
+        /* Slider Styles */
+        .slider-container {
+            width: 100%;
+            height: 50vh;
+            overflow: hidden;
+            margin: auto;
+            justify-content: center;
+            align-items: center;
+            margin-top: 30px;
+            display: flex;
+            background: #eee;
+            background-color: lightskyblue;
+            background-image: url("https://thestrive.co/wp-content/uploads/2022/01/Never-Give-Up-Quotes-Just-Keep-Climbing.jpg");
+            opacity: 1;
+        }
+
+        .slider {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+            width: 90%;
+            background-image: url("https://quotefancy.com/media/wallpaper/3840x2160/569162-Hubert-H-Humphrey-Quote-Never-give-in-and-never-give-up.jpg");
+
+            position: relative;
+            overflow: hidden;
+        }
+
+        .slide {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+            min-width: 20%;
+        }
+
+
+        .slider img {
+            width: 700px;
+            height: 300px;
+            display: block;
+            margin: auto;
+            justify-content: center;
+            border-radius: 50px;
+            justify-content: space-between;
+        }
+
+        /* Main Content */
+        .main-content {
+            padding: 20px;
+            text-align: center;
+            width: 1500px;
+            height: 40px;
+            margin-bottom:20px;
+        }
+
+        /* Section Container */
+        .section-container {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+
+        }
+
+        .section {
+            width: 200px;
+            height: 100px;
+            margin: 0 10px;
+            background-color:whitesmoke;
+            text-decoration-color:black ;
+            color: #fff;
+            display: flex;
+            justify-content:center;
+            align-items: center;
+            font-size: 20px;
+            cursor: pointer;
+            border-radius: 40px;
+            transition: background-color 0.3s;
+        }
+
+        .section:hover {
+            background-color: #0056b3;
+        }
+
+        /* Options Section */
+        .options-section {
+            background-image: url("https://htmlcolorcodes.com/assets/images/colors/light-brown-color-solid-background-1920x1080.png");
+            background-color:lightcyan;
+            padding: 20px;
+            border-radius: 40px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin: 20px auto;
+            width: 80%;
+            max-width: 800px;
+            text-align: left;
+        }
+
+        .options-section.hidden {
+            display: none;
+        }
+
+        .options-section h3 {
+            margin-top: 0;
+            font-family: sans-serif;
+        }
+
+        .options-section ul {
+            list-style: none;
+            padding: 12px;
+            background-image: url("https://wallpapers.com/images/hd/beige-color-background-abkeuoekzu4wb7fq.jpg");
+            border-radius: 20px;
+           }
+
+        .options-section ul li {
+            margin: 10px 0;
+        }
+
+        .options-section button {
+            background-color: whitesmoke;
+            color: black;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-right: 10px;
+            transition: background-color 0.3s;
+        }
+
+        .options-section button:hover {
+            background-color: darkcyan;
+        }
+
+        textarea {
+            width: 100%;
+            height: 100px;
+            margin: 10px 0;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        .police-contact {
+            margin: 20px 0;
+        }
+
+        /* Feedback Section */
+        .feedback-container {
+            text-align: left;
+        }
+
+        .star-rating {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 10px;
+        }
+
+        .star-rating input[type="radio"] {
+            display: none;
+        }
+
+        .star-rating label.star {
+            font-size: 24px;
+            color: #ddd;
+            cursor: pointer;
+        }
+
+        .star-rating input[type="radio"]:checked~label.star {
+            color: #ffbb33;
+        }
+
+        textarea#feedback-text {
+            margin: 10px 0;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .navbar .nav-links {
+                flex-direction: column;
+            }
+
+            .section-container {
+                flex-direction: column;
+            }
+
+            .section {
+                width: 100%;
+                margin: 10px 0;
+            }
+
+            .slider-container {
+                height: 50vh;
+            }
+        }
+    </style>
+</head>
+
+<body style="background-image: url(https://i.ytimg.com/vi/MYFs3_OWaJ0/maxresdefault.jpg);">
+    <!-- Navbar -->
+    <nav>
+        <ul class="navbar">
+            <li><a href="singup.html">Login</a></li>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="post.html">Story</a></li>
+            <li><a href="p.html">Admin section</a></li>
+            <li><a href="#account">Account</a></li>
+            <li><a href="s.html">Support</a></li>
+            <!-- <li><a href="feedback.html">Feedback</a></li> -->
+            <span></span>
+        </ul>
+    </nav>
+
+
+    <!-- Slider -->
+    <div class="slider-container">
+        <div class="slider">
+            <div class="slide"><img src="https://www.gpcgldh.ac.in/assets/images/d19496748ad90745023927b56cf9d3f2_ragging-returns-to-haunt-students-on-campuses-the-new-indian-express_851-764-768x689.jpg"></div>
+
+            <div class="slide"><img src="https://www.irishexaminer.com/cms_media/module_img/7416/3708199_4_articlelarge_iStock-1475459299.jpg" ></div>
+
+            <div class="slide"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-ngXA_O2EtwbpqDc6OIl2LgC01rgEy6lOQw&s.jpg"></div>
+
+            <div class="slide"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRYBtKKU6G6WrHbwcS7Kdm2StPMBGG-l5zs_w&s.jpg"></div>
+
+            <div class="slide"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQU9pqW1nPFFQHTlznJ5QrxxkT2Qwm0IxwBKA&s.jpg"></div>
+
+            <div class="slide"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQU9pqW1nPFFQHTlznJ5QrxxkT2Qwm0IxwBKA&s.jpg" alt="Slider Image 6"></div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <!-- Section Buttons -->
+        <div class="section-container">
+            <div class="section doctor" onclick="showDoctorOptions()" style="color: black;">Doctors</div>
+            <div class="section police" onclick="showPoliceOptions()" style="color:black;">Police</div>
+        </div>
+
+        <!-- Doctor Options -->
+        <section id="doctor-options" class="options-section hidden">
+            <h3><b>Select a Concern</b></h3>
+            <ul>
+                <li onclick="showDoctorList('Harassment')"><b>Harassment</b></li>
+                <li onclick="showDoctorList('Ragging')"><b>Ragging</b></li>
+                <li onclick="showDoctorList('Depression')"><b>Depression</b></li>
+                <li onclick="showDoctorList('Body Shaming')"><b>Body Shaming</b></li>
+                <li onclick="showDoctorList('Adult Issues')"><b>Adult Issues</b></li>
+                <li onclick="showDoctorList('Domestic Violence')"><b>Domestic Violence</b></li>
+            </ul>
+            <button onclick="backToHome()">Back</button>
+        </section>
+
+        <!-- Doctor List -->
+        <section id="doctor-list" class="options-section hidden">
+            <h3>Available Doctors</h3>
+            <ul>
+                <li>Dr. Meghnath Saha <button onclick="callDoctor('Meghnath Saha')">Call</button> <button
+                        onclick="messageDoctor('Meghnath Saha')">Message</button></li>
+                <li>Dr. Anirudhaya Maity <button onclick="callDoctor('Anirudhaya Maity')">Call</button> <button
+                        onclick="messageDoctor('Anirudhaya Maity')">Message</button></li>
+                <li>Dr. Raj Chakraborty <button onclick="callDoctor('Raj Chakraborty')">Call</button> <button
+                        onclick="messageDoctor('Raj Chakraborty')">Message</button></li>
+            </ul>
+            <button onclick="backToDoctorOptions()">Back</button>
+        </section>
+
+        <!-- Police Section -->
+        <section id="police-options" class="options-section hidden">
+            <h3>Find the Nearest Police Station</h3>
+            <button onclick="findPoliceStation()">Locate Police Station</button>
+            <div id="police-result"></div>
+            <h3>Describe the Crime</h3>
+            <textarea id="crime-description" placeholder="Describe your crime..."></textarea>
+            <button onclick="raiseComplaint()">Raise Complaint</button>
+            <div class="police-contact">
+                <button onclick="callPolice()">Call Police Station</button>
+            </div>
+            <button onclick="backToHome()">Back</button>
+        </section>
+
+        <!-- Feedback Section -->
+        <section id="feedback" class="options-section hidden">
+            <h3>Rate Your Experience</h3>
+            <div class="feedback-container">
+                <div class="star-rating">
+                    <input type="radio" id="star5" name="rating" value="5" /><label for="star5"
+                        class="star">&#9733;</label>
+                    <input type="radio" id="star4" name="rating" value="4" /><label for="star4"
+                        class="star">&#9733;</label>
+                    <input type="radio" id="star3" name="rating" value="3" /><label for="star3"
+                        class="star">&#9733;</label>
+                    <input type="radio" id="star2" name="rating" value="2" /><label for="star2"
+                        class="star">&#9733;</label>
+                    <input type="radio" id="star1" name="rating" value="1" /><label for="star1"
+                        class="star">&#9733;</label>
+                </div>
+                <textarea id="feedback-text" placeholder="Leave your comments here..."></textarea>
+                <button onclick="submitFeedback()">Submit Feedback</button>
+            </div>
+            <button onclick="backToHome()">Back</button>
+        </section>
+    </div>
+
+    <script>let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide');
+        const totalSlides = 6; // Assign the value directly
+
+        function showSlide(index) {
+            slides.forEach((slide, i) => {
+                slide.style.transform = `translateX(${(i - index) * 100}%)`;
+            });
+        }
+
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % totalSlides;
+            showSlide(currentSlide);
+        }
+
+        function prevSlide() {
+            currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+            showSlide(currentSlide);
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            showSlide(currentSlide);
+            setInterval(nextSlide, 1000); // Change slide every 1 second
+        });
+        // Show Doctor Options
+        function showDoctorOptions() {
+            document.getElementById('doctor-options').style.display = 'block';
+            document.getElementById('doctor-list').style.display = 'none';
+            document.getElementById('police-options').style.display = 'none';
+            document.getElementById('feedback').style.display = 'none';
+        }
+
+        // Show Doctor List
+        function showDoctorList(concern) {
+            document.getElementById('doctor-options').style.display = 'none';
+            document.getElementById('doctor-list').style.display = 'block';
+            document.getElementById('police-options').style.display = 'none';
+            document.getElementById('feedback').style.display = 'none';
+            document.getElementById('doctor-list').innerHTML = `
+        <h3>Doctors for ${concern}</h3>
+        <ul>
+            <li>Dr. Meghnath Saha <button onclick="callDoctor('Meghnath Saha')">Call</button> <button onclick="messageDoctor('Meghnath Saha')">Message</button></li>
+            <li>Dr. Anirudhaya Maity <button onclick="callDoctor('Anirudhaya Maity')">Call</button> <button onclick="messageDoctor('Anirudhaya Maity')">Message</button></li>
+            <li>Dr.Raj Chakraborty  <button onclick="callDoctor('Raj Chakraborty')">Call</button> <button onclick="messageDoctor('Raj Chakraborty')">Message</button></li>
+        </ul>
+        <button onclick="backToDoctorOptions()">Back</button>
+    `;
+        }
+
+        // Back to Home
+        function backToHome() {
+            document.getElementById('doctor-options').style.display = 'none';
+            document.getElementById('doctor-list').style.display = 'none';
+             document.getElementById('police-options').style.display = 'none';
+            document.getElementById('feedback').style.display = 'none';
+        }
+
+        // Back to Doctor Options
+        function backToDoctorOptions() {
+            document.getElementById('doctor-options').style.display = 'block';
+            document.getElementById('doctor-list').style.display = 'none';
+        }
+
+        // Call Doctor
+        function callDoctor(name) {
+            alert(`Calling ${name}`);
+        }
+
+        // Message Doctor
+        function messageDoctor(name) {
+            alert(`Messaging ${name}`);
+        }
+
+        // Show Police Options
+        function showPoliceOptions() {
+            document.getElementById('doctor-options').style.display = 'none';
+            document.getElementById('doctor-list').style.display = 'none';
+            document.getElementById('police-options').style.display = 'block';
+            document.getElementById('feedback').style.display = 'none';
+        }
+
+        // Find Nearest Police Station
+        function findPoliceStation() {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition((position) => {
+                    // Placeholder result
+                    document.getElementById('police-result').innerText = 'Nearest Police Station: Example Station';
+                }, () => {
+                    alert('Location access denied.');
+                });
+            } else {
+                alert('Geolocation is not supported by this browser.');
+            }
+        }
+
+        // Raise Complaint
+        function raiseComplaint() {
+            const crimeDescription = document.getElementById('crime-description').value;
+            if (crimeDescription) {
+                alert('Complaint raised successfully!');
+            } else {
+                alert('Please describe the crime before raising a complaint.');
+            }
+        }
+
+        // Call Police
+        function callPolice() {
+            alert('Calling nearest police station...');
+        }
+
+        // Submit Feedback
+        function submitFeedback() {
+            const rating = document.querySelector('input[name="rating"]:checked');
+            const feedbackText = document.getElementById('feedback-text').value;
+            if (rating && feedbackText) {
+                alert('Thank you for your feedback!');
+            } else {
+                alert('Please complete all fields before submitting feedback.');
+            }
+        }
+    </script>
+
+</body>
+
+</html>

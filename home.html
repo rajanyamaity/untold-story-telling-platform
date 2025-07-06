@@ -1,0 +1,199 @@
+<html>
+<head>
+
+<style >
+	
+
+.navbar {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: right;
+}
+
+.navbar li {
+    margin: 0 20px;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+
+}
+
+.navbar a:hover {
+    color: #ddd;
+}
+nav {
+    width: 100%;
+    background-color:darkcyan;
+    padding: 10px 0;
+}
+*
+{
+	box-sizing:border-box;
+    font-family: 'lato',sans-serif;
+
+/*width: 100%;
+	height:100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+   
+}*/
+
+}
+.wrapper{
+	width: 100%;
+	height:100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	display: flex;
+	width: 100%;
+	justify-content: space-around;
+	background-image: url(https://c8.alamy.com/comp/J9FJ3D/do-not-be-ashamed-of-your-story-it-will-inspire-others-handwriting-J9FJ3D.jpg);
+	
+}
+.card{
+	width: 320px;
+	height:280px ;
+	padding:2rem 1rem ;
+	background: #fff;
+	position: relative;
+	display: flex;
+	align-items:flex-end ;
+	box-shadow: 0px 20px 26px rosybrown;
+	transition: 0.5s ease-in-out;
+
+}
+
+.card:hover{
+	transform: translateY(40px);
+}
+.card:before{
+	content: "";
+	position:absolute;
+	top:0;
+	left:0;
+	display: block;
+	width: 100%;
+	height: 100%;
+	background:linear-gradient(to bottom,rgba(0,176,155,0.5),rgba(150,201,61,1));
+	z-index:2;
+	transition: 0.5s all;
+	opacity:0;
+}
+.card:hover:before{
+	opacity: 1;
+
+}
+.card img{
+	position:absolute;
+	top:0;
+	left:0;
+	object-fit: cover;
+	width: 100%;
+	height: 100%;
+
+}
+.card .info{
+	position: relative;
+	z-index:3;
+	transition: 0.5s all;
+	opacity:0;
+	color:#fff;
+	transform: translateY(30px);
+}
+.card:hover .info{
+	opacity: 1;
+	transform: translateY(0px);
+}
+.card .info h1{
+	margin: 0;
+}
+.card .info p{
+	letter-spacing: 1px;
+	font-size: 15px;
+	margin-top: 8px;
+	margin-bottom:20px ;
+}
+.card .info .btn{
+	text-decoration: none;
+	padding:0.5rem 1rem;
+	background: #fff;
+	font-size: 14px;
+	font-weight: bold;
+	cursor: pointer;
+	transition: 0.4s ease-in-out;
+}
+
+</style>
+
+
+</head>
+<body>
+
+<nav>
+        <ul class="navbar">
+            <li><a href="home.html"/>Home</a></li>
+            <li><a href="post.html"/>Story</a></li>
+            <li><a href="P.HTML"/>Admin section </a></li>
+            <li><a href="#account">Account</a></li>
+            <li><a href="s.html"/>Support</a></li>
+            <span></span>
+        </ul>
+    </nav>
+
+
+
+<div class="wrapper">
+	
+     <div class="card">
+       <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSa5LmPGAbP3AAANo5XJDaEy6wea8FLuqaa_A&s" alt=" ragging">
+       <div class="info">
+       	<h1>HARASSMENT</h1>
+       	<p>No one can make you feel inferior without your consent </p>
+        <a href="https://support.google.com/youtube/answer/2802268?hl=en/" class="btn">read more</a>
+    </div>
+   </div>
+
+<div class="card">
+       <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPZ2hVmvcGHpGQcvchlJ4Xa8VAnVb2VGOYUA&s">
+       <div class="info">
+       	<h1>RAGGING</h1>
+       	<p>Don't hide the raising buds under the shadows of Ragging. Be a mentor, not a tormentor</p>
+        <a href="https://www.antiragging.in/" class="btn">read more</a>
+    </div>
+   </div>
+
+<div class="card">
+       <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTl_q6yabH-UrqxNzX0GyMGUdAT7yZ-Nsqh5A&s" width="250px"height="180px">
+       <div class="info">
+       	<h1>DEPRESSION</h1>
+       	<p>You will never find a rainbow if you are looking down --  depression</p>
+        <a href="https://www.nimh.nih.gov/health/statistics/" class="btn">read more</a>
+    </div>
+   </div>
+  <div class="card">
+       <img src="https://cdn.lawnet.vn//uploads/tintuc/2022/11/19/bodyshamming-bi-xu-ly-the-nao.jpg" width="250px"height="180px">
+       <div class="info">
+       	<h1>BODY SHAMING</h1>
+       	<p>You define beauty yourself, society doesn't define your beauty body shaming</p>
+        <a href="https://www.helpguide.org/mental-health/wellbeing/body-shaming/" class="btn">read more</a>
+    </div>
+   </div>
+
+   
+
+
+</div>
+
+</body>
+<footer style="width: 100%;height:50px;background-color:lightsteelblue;">
+<center>
+	<p style="font-family: sans-serif;padding: 15px;"><b>"It's never too late to do the right things"."Sometimes,life will kick you around, but sooner or later, you realize you’re not just a survivor.You’re a warrior" ."You are stronger than you know." </b></p></center>
+</footer>
+</html>

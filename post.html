@@ -1,0 +1,207 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Upakosh</title>
+ <style>
+  /* Reset and basic styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #fafafa;
+  color: #333;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  
+}
+
+.navbar {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: right;
+}
+
+.navbar li {
+  margin: 0 20px;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+
+}
+
+.navbar a:hover {
+  color: #ddd;
+}
+nav {
+  width: 100%;
+  background-color:darkcyan;
+  padding: 10px 0;
+}
+
+.post {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  padding: 10px;
+  position: relative;
+  margin-top: 20px;
+}
+
+.post-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.avatar {
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.username {
+  font-weight: bold;
+}
+
+.post-image {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.post-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.like-button, .support-button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.like-button {
+  background-color: #28a745;
+}
+
+.support-button {
+  background-color: #ffc107;
+}
+ </style>
+</head>
+<body>
+  <nav>
+     <ul class="navbar">
+            <li><a href="home.html"/>Home</a></li>
+            <li><a href="post.html"/>Story</a></li>
+            <li><a href="p.html"/>Admin section </a></li>
+            <li><a href="#account">Account</a></li>
+            <li><a href="s.html"/>Support</a></li>
+            <span></span>
+        </ul>
+
+</nav>
+  
+
+  <section id="posts" class="container">
+    <div class="post">
+      <div class="post-header">
+        <img src="https://via.placeholder.com/50" alt="User Avatar" class="avatar">
+        <span class="username">User One</span>
+      </div>
+     <p class="post-image">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur quod labore doloribus id, excepturi quaerat beatae exercitationem aperiam eveniet ipsum quibusdam laboriosam iure dignissimos hic officiis eligendi consequatur dicta. Repellat.</p> 
+      <div class="post-footer">
+        <button class="like-button" onclick="toggleLike(this)">Like</button>
+        <button class="support-button"onclick="togglesupport(this)">Support</button>
+      </div>
+    </div>
+    <div class="post">
+      <div class="post-header">
+        <img src="https://via.placeholder.com/50" alt="User Avatar" class="avatar">
+        <span class="username">User Two</span>
+      </div>
+     <p class="post-image">Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident quia nam quas illum ea vitae minima quos ab, velit nostrum eveniet culpa enim, unde est libero hic dolores ipsa tempora veniam officia! Asperiores eum dignissimos iure. Quis illo voluptates voluptate distinctio minus tempora corrupti doloremque, consequuntur esse eligendi, quo error enim quam porro. Incidunt veritatis iure, quae quis ducimus facilis temporibus, eligendi impedit delectus vero soluta dignissimos, quo exercitationem! Eos rerum alias ipsam nemo. Fuga alias atque odio suscipit totam at itaque quo dolorum saepe, nobis ducimus pariatur sed deserunt soluta ab impedit magni velit voluptate, sapiente ea voluptates dicta. Nam, deserunt assumenda? Reprehenderit aperiam commodi ratione cumque ut. Repudiandae pariatur, eum iure, natus exercitationem sed at doloremque aliquid odit, animi temporibus enim. Voluptatum ducimus eum illum dolorem exercitationem. Vitae facere neque molestias asperiores magni iste exercitationem cum commodi maiores optio dicta reprehenderit, nemo fugit provident ad dolorem expedita voluptatem suscipit. Aspernatur harum neque dolore fuga facilis? Architecto fugit non consequatur maxime atque recusandae obcaecati tempore iure, voluptates neque, voluptatem soluta laboriosam ea nisi. Sed perspiciatis illum nemo perferendis et quisquam necessitatibus quae, veniam qui minima delectus accusamus quibusdam vero modi eos asperiores facere eius impedit inventore enim? Exercitationem molestiae eaque, maiores facere, atque libero modi accusantium voluptatem ea voluptatum labore id soluta accusamus officiis quos. Ipsam harum libero corrupti tenetur dolorum temporibus dicta..</p> 
+     
+      <div class="post-footer">
+        <button class="like-button" onclick="toggleLike(this)">Like</button>
+        <button class="support-button">Support</button>
+      </div>
+    </div>
+    <div class="post">
+      <div class="post-header">
+        <img src="https://via.placeholder.com/50" alt="User Avatar" class="avatar">
+        <span class="username">User Three</span>
+      </div>
+     <p class="post-image">Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident quia nam quas illum ea vitae minima quos ab, velit nostrum eveniet culpa enim, unde est libero hic dolores ipsa tempora veniam officia! Asperiores eum dignissimos iure. Quis illo voluptates voluptate distinctio minus tempora corrupti doloremque, consequuntur esse eligendi, quo error enim quam porro. Incidunt veritatis iure, quae quis ducimus facilis temporibus, eligendi impedit delectus vero soluta dignissimos, quo exercitationem! Eos rerum alias ipsam nemo. Fuga alias atque odio suscipit totam at itaque quo dolorum saepe, nobis ducimus pariatur sed deserunt soluta ab impedit magni velit voluptate, sapiente ea voluptates dicta. Nam, deserunt assumenda? Reprehenderit aperiam commodi ratione cumque ut. Repudiandae pariatur, eum iure, natus exercitationem sed at doloremque aliquid odit, animi temporibus enim. Voluptatum ducimus eum illum dolorem exercitationem. Vitae facere neque molestias asperiores magni iste exercitationem cum commodi maiores optio dicta reprehenderit, nemo fugit provident ad dolorem expedita voluptatem suscipit. Aspernatur harum neque dolore fuga facilis? Architecto fugit non consequatur maxime atque recusandae obcaecati tempore iure, voluptates neque, voluptatem soluta laboriosam ea nisi. Sed perspiciatis illum nemo perferendis et quisquam necessitatibus quae, veniam qui minima delectus accusamus quibusdam vero modi eos asperiores facere eius impedit inventore enim? Exercitationem molestiae eaque, maiores facere, atque libero modi accusantium voluptatem ea voluptatum labore id soluta accusamus officiis quos. Ipsam harum libero corrupti tenetur dolorum temporibus dicta..</p> 
+     
+      <div class="post-footer">
+        <button class="like-button" onclick="toggleLike(this)">Like</button>
+        <button class="support-button">Support</button>
+      </div>
+    </div>
+    <div class="post">
+      <div class="post-header">
+        <img src="https://via.placeholder.com/50" alt="User Avatar" class="avatar">
+        <span class="username">User four</span>
+      </div>
+     <p class="post-image">Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident quia nam quas illum ea vitae minima quos ab, velit nostrum eveniet culpa enim, unde est libero hic dolores ipsa tempora veniam officia! Asperiores eum dignissimos iure. Quis illo voluptates voluptate distinctio minus tempora corrupti doloremque, consequuntur esse eligendi, quo error enim quam porro. Incidunt veritatis iure, quae quis ducimus facilis temporibus, eligendi impedit delectus vero soluta dignissimos, quo exercitationem! Eos rerum alias ipsam nemo. Fuga alias atque odio suscipit totam at itaque quo dolorum saepe, nobis ducimus pariatur sed deserunt soluta ab impedit magni velit voluptate, sapiente ea voluptates dicta. Nam, deserunt assumenda? Reprehenderit aperiam commodi ratione cumque ut. Repudiandae pariatur, eum iure, natus exercitationem sed at doloremque aliquid odit, animi temporibus enim. Voluptatum ducimus eum illum dolorem exercitationem. Vitae facere neque molestias asperiores magni iste exercitationem cum commodi maiores optio dicta reprehenderit, nemo fugit provident ad dolorem expedita voluptatem suscipit. Aspernatur harum neque dolore fuga facilis? Architecto fugit non consequatur maxime atque recusandae obcaecati tempore iure, voluptates neque, voluptatem soluta laboriosam ea nisi. Sed perspiciatis illum nemo perferendis et quisquam necessitatibus quae, veniam qui minima delectus accusamus quibusdam vero modi eos asperiores facere eius impedit inventore enim? Exercitationem molestiae eaque, maiores facere, atque libero modi accusantium voluptatem ea voluptatum labore id soluta accusamus officiis quos. Ipsam harum libero corrupti tenetur dolorum temporibus dicta..</p> 
+     
+      <div class="post-footer">
+        <button class="like-button" onclick="toggleLike(this)">Like</button>
+        <button class="support-button">Support</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- <section id="reels" class="container">
+    <h2>Reels</h2>
+    <div class="reels">
+      <div class="reel">
+        <video src="https://www.w3schools.com/html/mov_bbb.mp4" controls></video>
+      </div>
+      <div class="reel">
+        <video src="https://www.w3schools.com/html/mov_bbb.mp4" controls></video>
+      </div>
+    </div>
+  </section> -->
+
+
+  <script>
+  function toggleLike(button) {
+    if (button.classList.contains('😔liked')) {
+      button.classList.remove('😔liked');
+      button.textContent = 'Like';
+    } else {
+      button.classList.add('😔liked');
+      button.textContent = '😔Liked';
+    }
+  }
+  </script>
+</body>
+</html>
+
+
+
+
+s
